@@ -5,7 +5,7 @@ body {
   color: #f0f0f0;
 }
 
-header.hero {
+header.title {
   background: url('../images/museum_background.jpg!d') no-repeat center center/cover;
   text-align: center;
   color: #fff;
@@ -13,13 +13,13 @@ header.hero {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 
-header.hero h1 {
+header.title h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
   text-shadow: 2px 2px 5px black;
 }
 
-header.hero p {
+header.title p {
   font-size: 1.2rem;
   text-shadow: 1px 1px 3px black;
 }
