@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #222;
+  color: white;
+}
+
+.nav-buttons, .sub-nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.nav-buttons button,
+.sub-nav-buttons button {
+  background-color: #444;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-buttons button:hover,
+.sub-nav-buttons button:hover {
+  background-color: #666;
+}
+
+.sub-nav-buttons button.active {
+  background-color: #1e90ff;
+}
+
+.collection-section {
+  max-width: 1100px;
+  margin: 0 auto 3rem auto;
+}
+
+.collection-section > h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Each artifact container */
+.collection-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 1rem 2rem;
+  padding: 1.5rem;
+}
+
+.collection-item.alt {
+  flex-direction: row-reverse;
+}
+
+.collection-img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem;
+  flex-shrink: 0;
+}
+
+.collection-info {
+  flex: 1;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.collection-info h2 {
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem;
+  background-color: #eee;
+  border-top: 1px solid #ccc;
+}
