@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Souvenir Shop - Game Museum</title>
+  <link rel="stylesheet" href="../css/shop.css" />
+</head>
+<body>
+  <header>
+    <h1>Souvenir Shop</h1>
+  </header>
+
+  <nav class="nav-buttons">
+    <button onclick="location.href='../index.html'">Home</button>
+    <button onclick="location.href='staff.html'">Staff</button>
+    <button onclick="location.href='collections.html'">Collections</button>
+    <button onclick="location.href='shop.html'">Shop</button>
+  </nav>
+
+  <main>
+    <section class="shop-container">
+
+      <div class="souvenir-item" id="item001">
+        <img src="../images/Nintendo Entertainment System.jpg" alt="Miniature NES Console Model" title="Classic Nintendo Entertainment System" tabindex="0" class="shop-img" data-description="Replicated plastic model of the NES console. Original hardware revolutionized home gaming." data-price="$29.99" />
+        <h2>Nintendo NES Mini Model</h2>
+        <p>Material: Plastic resin<br>Purpose: Desk collectible</p>
+        <p class="price">$29.99</p>
+        <button aria-label="Add Nintendo NES Mini Model to Cart" onclick="addToCart('item001', 'Nintendo NES Mini Model', 29.99)">Add Nintendo NES Mini Model to Cart</button>
+      </div>
+
+      <div class="souvenir-item" id="item002">
+        <img src="../images/Arcade Machine Pac-Man Cabinet.jpg" alt="Pac-Man Arcade Poster" title="Iconic Pac-Man Arcade Poster" tabindex="0" class="shop-img" data-description="High-quality print of original 1980 Pac-Man arcade poster." data-price="$19.99" />
+        <h2>Pac-Man Arcade Poster</h2>
+        <p>Material: Glossy paper<br>Purpose: Wall decoration</p>
+        <p class="price">$19.99</p>
+        <button aria-label="Add Pac-Man Arcade Poster to Cart" onclick="addToCart('item002', 'Pac-Man Arcade Poster', 19.99)">Add Pac-Man Arcade Poster to Cart</button>
+      </div>
+
+      <div class="souvenir-item" id="item003">
+        <img src="../images/Super Mario Bros Cartridge.jpg" alt="Super Mario Bros Cartridge Keychain" title="Super Mario Bros Cartridge Replica Keychain" tabindex="0" class="shop-img" data-description="Miniature keychain modeled after the iconic Super Mario Bros NES cartridge." data-price="$9.99" />
+        <h2>Super Mario Bros Cartridge Keychain</h2>
+        <p>Material: Plastic and metal<br>Purpose: Functional keychain</p>
+        <p class="price">$9.99</p>
+        <button aria-label="Add Super Mario Bros Cartridge Keychain to Cart" onclick="addToCart('item003', 'Super Mario Bros Cartridge Keychain', 9.99)">Add Super Mario Bros Cartridge Keychain to Cart</button>
+      </div>
+
+      <div class="souvenir-item" id="item004">
+        <img src="../images/The International 2018 Poster.jpg" alt="The International 2018 Poster" title="Esports Event Poster - The International 2018" tabindex="0" class="shop-img" data-description="Glossy poster from the Dota 2 International 2018 esports tournament." data-price="$24.99" />
+        <h2>The International 2018 Poster</h2>
+        <p>Material: Glossy paper<br>Purpose: Collector’s memorabilia</p>
+        <p class="price">$24.99</p>
+        <button aria-label="Add The International 2018 Poster to Cart" onclick="addToCart('item004', 'The International 2018 Poster', 24.99)">Add The International 2018 Poster to Cart</button>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Modal Container -->
+  <div id="itemModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc" style="display:none;">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal" onclick="closeModal()">×</button>
+      <h2 id="modalTitle"></h2>
+      <img id="modalImage" src="" alt="" />
+      <p id="modalDesc"></p>
+      <p id="modalPrice"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Disclaimer: "The images were created by AI and curated, edited, reviewed, verified, validated, and augmented by a human."</p>
+  </footer>
+
+  <script>
+    // Add to Cart stub for Phase 2
+    function addToCart(id, name, price) {
+      alert(`Added "${name}" to cart at $${price.toFixed(2)}.`);
+    }
+
+    // Modal show function
+    document.querySelectorAll('.shop-img').forEach(img => {
+      img.addEventListener('click', () => {
+        const modal = document.getElementById('itemModal');
+        document.getElementById('modalTitle').textContent = img.title;
+        document.getElementById('modalImage').src = img.src;
+        document.getElementById('modalImage').alt = img.alt;
+        document.getElementById('modalDesc').textContent = img.dataset.description;
+        document.getElementById('modalPrice').textContent = `Price: ${img.dataset.price}`;
+        modal.style.display = 'block';
+      });
+      // Allow keyboard "Enter" key to open modal on focused image
+      img.addEventListener('keydown', e => {
+        if(e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          img.click();
+        }
+      });
+    });
+
+    // Modal close function
+    function closeModal() {
+      document.getElementById('itemModal').style.display = 'none';
+    }
+
+    // Close modal on outside click
+    window.addEventListener('click', e => {
+      const modal = document.getElementById('itemModal');
+      if(e.target === modal) closeModal();
+    });
+
+    // Close modal on Escape key
+    window.addEventListener('keydown', e => {
+      if(e.key === 'Escape') closeModal();
+    });
+  </script>
+
+</body>
+</html>
