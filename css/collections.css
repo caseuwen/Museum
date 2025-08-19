@@ -1,96 +1,48 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  margin: 0;
-  padding: 0;
-  color: #333;
+/* --- Modal Styles --- */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed; /* sit on top of the page */
+  z-index: 1000; /* above all other content */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* scroll if content too tall */
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent overlay */
 }
 
-header {
-  text-align: center;
-  padding: 2rem;
-  background-color: #222;
-  color: white;
-}
-
-.nav-buttons, .sub-nav-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0 2rem 0;
-}
-
-.nav-buttons button,
-.sub-nav-buttons button {
-  background-color: #444;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.nav-buttons button:hover,
-.sub-nav-buttons button:hover {
-  background-color: #666;
-}
-
-.sub-nav-buttons button.active {
-  background-color: #1e90ff;
-}
-
-.collection-section {
-  max-width: 1100px;
-  margin: 0 auto 3rem auto;
-}
-
-.collection-section > h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-weight: 700;
-  color: #222;
-}
-
-/* Each artifact container */
-.collection-item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+.modal-content {
   background-color: #fff;
+  margin: 5% auto; /* center vertically with some space */
+  padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin: 1rem 2rem;
-  padding: 1.5rem;
+  max-width: 700px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  overflow-y: auto;
+  max-height: 90vh; /* so it never exceeds viewport height */
 }
 
-.collection-item.alt {
-  flex-direction: row-reverse;
-}
-
-.collection-img {
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
-  margin: 1rem;
-  flex-shrink: 0;
-}
-
-.collection-info {
-  flex: 1;
-  max-width: 600px;
-  padding: 1rem;
-}
-
-.collection-info h2 {
+.modal-content h2,
+.modal-content h3 {
   margin-top: 0;
 }
 
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 1rem;
-  background-color: #eee;
-  border-top: 1px solid #ccc;
+.close-modal {
+  float: right;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-modal:hover {
+  color: #1e90ff;
+}
+
+/* Optional: add padding for text inside modal */
+#modal-body p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
