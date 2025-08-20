@@ -135,18 +135,16 @@ footer {
 
 .history-item {
   display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 20px;
+  flex-direction: column; 
+  align-items: center;    
+  margin-bottom: 40px;   
 }
 
 .history-item img {
-  width: 250px;
+  max-width: 80%; 
   height: auto;
-  margin-right: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  display: block; 
+  margin-bottom: 20px;
 }
 
 .history-facts, .history-interpretation {
@@ -158,6 +156,8 @@ footer {
   background-color: #f9f9f9;
   border-radius: 8px;
   margin-bottom: 10px;
+  max-width: 800px; 
+  width: 100%;
 }
 
 .history-facts h2, .history-interpretation h2 {
@@ -175,6 +175,7 @@ footer {
 }
 .history-title {
   text-align: center;
-  margin-bottom: 10px; /* optional spacing between title and image */
   font-size: 1.5em;
+  margin-bottom: 10px;
+  width: 100%; 
 }
