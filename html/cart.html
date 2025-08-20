@@ -18,7 +18,7 @@
 
   <main>
     <section id="cartSection">
-      <table id="cartTable" aria-label="Shopping Cart Items">
+      <table class="cart-table" aria-label="Shopping Cart Items">
         <thead>
           <tr>
             <th>Image</th>
@@ -35,7 +35,7 @@
       </table>
     </section>
 
-    <section id="summarySection">
+    <section class="cart-summary">
       <h2>Summary</h2>
       <table>
         <tbody>
@@ -49,7 +49,11 @@
           <tr><td><strong>Invoice Total:</strong></td><td id="invoiceTotalCell">$0.00</td></tr>
         </tbody>
       </table>
-      <button id="clearCartBtn">Clear Cart</button>
+
+      <div class="cart-actions">
+        <button id="clearCartBtn">Clear Cart</button>
+        <button id="checkoutBtn">Checkout</button>
+      </div>
     </section>
   </main>
 
