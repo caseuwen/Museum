@@ -142,20 +142,27 @@ footer {
 }
 
 .history-item img {
-  max-width: 40%; 
+  max-width: 200px; 
   height: auto;
   display: block; 
   margin-bottom: 0 auto 20px;
+  flex-shrink: 0;
 }
 
-.history-facts, .history-interpretation {
+.history-interpretation {
   background-color: #ffffff; 
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
-
+.history-facts {
+  flex: 1; 
+  background-color: #ffffff; 
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 .history-facts h2, .history-interpretation h2 {
   margin-top: 0;
 }
