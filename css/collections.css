@@ -134,30 +134,26 @@ footer {
 }
 
 .history-item {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;    
-  margin-bottom: 40px;   
+  background-color: #f8f4f0;  /* light neutral background for readability */
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* subtle shadow for depth */
 }
 
 .history-item img {
-  max-width: 80%; 
+  max-width: 40%; 
   height: auto;
   display: block; 
-  margin-bottom: 20px;
+  margin-bottom: 0 auto 20px;
 }
 
 .history-facts, .history-interpretation {
-  flex: 1;
-  max-height: 300px;
-  overflow-y: auto;
-  padding: 10px;
-  box-sizing: border-box;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  max-width: 800px; 
-  width: 100%;
+  background-color: #ffffff; 
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .history-facts h2, .history-interpretation h2 {
