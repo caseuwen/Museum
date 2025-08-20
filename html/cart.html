@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Yuwen Chen">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Shopping Cart</title>
+  <link rel="stylesheet" href="../css/cart.css">
+  <meta name="robots" content="nofollow">
+</head>
+<body>
+  <header>
+    <h1>Shopping Cart</h1>
+    <nav>
+      <button onclick="location.href='shop.html'">Keep Shopping</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="cartSection">
+      <table id="cartTable" aria-label="Shopping Cart Items">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Unit Price</th>
+            <th>Line Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="cartBody">
+          <!-- Items will be rendered here -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="summarySection">
+      <h2>Summary</h2>
+      <table>
+        <tbody>
+          <tr><td>Subtotal of Item Totals:</td><td id="subtotalCell">$0.00</td></tr>
+          <tr><td>Volume Discount:</td><td id="volumeDiscCell">($0.00)</td></tr>
+          <tr><td>Member Discount:</td><td id="memberDiscCell">($0.00)</td></tr>
+          <tr><td>Shipping:</td><td id="shippingCell">$0.00</td></tr>
+          <tr><td><strong>Subtotal (Taxable):</strong></td><td id="taxableSubtotalCell">$0.00</td></tr>
+          <tr><td>Tax Rate:</td><td id="taxRateCell">10.2%</td></tr>
+          <tr><td>Tax Amount:</td><td id="taxAmountCell">$0.00</td></tr>
+          <tr><td><strong>Invoice Total:</strong></td><td id="invoiceTotalCell">$0.00</td></tr>
+        </tbody>
+      </table>
+      <button id="clearCartBtn">Clear Cart</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Museum Souvenir Shop</p>
+  </footer>
+
+  <script src="../js/cart.js"></script>
+</body>
+</html>
